@@ -1,0 +1,92 @@
+<template>
+  <div id="app">
+    <header>
+      <img src="./assets/logo.png">
+      <h1>Welcome to VueJS</h1>
+    </header>
+    <node-list></node-list>
+  </div>
+</template>
+
+<script>
+  import NodeList from './components/NodeList'
+
+  export default {
+    name: 'app',
+    components: {
+      NodeList
+    }
+  }
+</script>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, sans-serif;
+  }
+
+  input {
+    max-width: 500px;
+  }
+
+  .gray {
+    color: #828282;
+  }
+
+  .orange {
+    background-color: #ff6600;
+  }
+
+  .background-gray {
+    background-color: rgb(246,246,239);
+  }
+
+  .f11 {
+    font-size: 11px;
+  }
+
+  .w85 {
+    width: 85%;
+  }
+
+  .button {
+    font-family: monospace;
+    font-size: 10pt;
+    color: black;
+    background-color: buttonface;
+    text-align: center;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    cursor: pointer;
+    max-width: 250px;
+  }
+  .node-item{
+    padding: 1em;
+  }
+  .node-item:nth-child(even) {
+    background: #CCC;
+  }
+
+  .node-item > div > .col-1 {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+  }
+ 
+  .node-item > div > .col-2 {
+    display: inline-block;
+    width: 45%;
+  }
+  #app > header > img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #app > header > h1{
+    text-align: center;
+  }
+
+</style>
