@@ -4,17 +4,17 @@
       <img src="./assets/logo.png">
       <h1>Welcome to VueJS</h1>
     </header>
-    <node-list></node-list>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import NodeList from './components/NodeList'
+  import AppHeader from './components/AppHeader'
 
   export default {
     name: 'app',
     components: {
-      NodeList
+      AppHeader
     }
   }
 </script>

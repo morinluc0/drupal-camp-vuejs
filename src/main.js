@@ -3,6 +3,7 @@ import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import 'tachyons'
 import Vue from 'vue'
+import router from './router'
 
 import VueApollo from 'vue-apollo'
 
@@ -36,6 +37,6 @@ const apolloProvider = new VueApollo({
 new Vue({
   el: '#app',
   provide: apolloProvider.provide(),
-  //provide: apolloProvider,
+  router,
   render: h => h(App)
 })

@@ -42,3 +42,16 @@ export const ALL_NODES_QUERY = gql`
   }
 `
 
+export const CREATE_NODE_MUTATION = gql`
+  mutation CreateNodeMutation($title: String!, $description: String!, $fieldTags: String!) {
+    createArticle(title: $title, description: $description, fieldTags: $fieldTags) {
+      entity {
+        entityId
+      }
+      errors
+      violations {
+        message
+      }
+    }
+  }
+`
